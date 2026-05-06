@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Dashboard - SkinScan AI</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-brand"><i class="fas fa-microscope"></i> SkinScan AI</div>
+            <ul class="nav-menu">
+                <li><a href="/dashboard" class="nav-link active"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+                <li><a href="/predict" class="nav-link"><i class="fas fa-plus-circle"></i> Nouvelle Analyse</a></li>
+                <li><a href="/logout" class="nav-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header-title">
+                <h1>Tableau de Bord Médical</h1>
+                <p>Statistiques et analyses en temps réel</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <i class="fas fa-folder-open"></i>
+                    <span class="number">{{ total }}</span>
+                    <span class="label">Total Analyses</span>
+                </div>
+                <div class="stat-card" style="border-bottom-color: #e74c3c;">
+                    <i class="fas fa- virus" style="color: #e74c3c;"></i>
+                    <span class="number">{{ m_count }}</span>
+                    <span class="label">Malignant Cases</span>
+                </div>
+                <div class="stat-card" style="border-bottom-color: #2ecc71;">
+                    <i class="fas fa-check-circle" style="color: #2ecc71;"></i>
+                    <span class="number">{{ b_count }}</span>
+                    <span class="label">Benign Cases</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

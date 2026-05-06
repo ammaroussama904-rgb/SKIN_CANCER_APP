@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>SkinScan AI - Nouvelle Analyse</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fas fa-microscope"></i> SkinScan AI
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/dashboard" class="nav-link"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li class="nav-item"><a href="/predict" class="nav-link active"><i class="fas fa-plus-circle"></i> Nouvelle Analyse</a></li>
+                <li class="nav-item"><a href="/patients" class="nav-link"><i class="fas fa-users"></i> Liste Patients</a></li>
+                <li class="nav-item" style="margin-top: auto;"><a href="/logout" class="nav-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header-title">
+                <h1>Nouvelle Analyse Dermatologique</h1>
+                <p>Téléchargez une image claire de la lésion pour obtenir un diagnostic assisté par IA.</p>
+            </div>
+
+            <div class="analysis-container">
+                <form action="/predict" method="POST" enctype="multipart/form-data" id="uploadForm">
+                    <div class="image-frame" id="dropZone" style="cursor: pointer; padding: 60px;">
+                        <i class="fas fa-cloud-upload-alt" style="font-size: 50px; color: #3498db; margin-bottom: 20px;"></i>
+                        <h3 id="fileNameDisplay">Cliquez ou glissez une image ici</h3>
+                        <p style="font-size: 13px;">Format supporté: JPG, PNG (Max 5MB)</p>
+                        <input type="file" name="file" id="fileInput" hidden required onchange="updateFileName()">
+                    </div>
+
+                    <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left;">
+                        <div class="input-group" style="margin-bottom: 0;">
+                            <label style="font-weight: 700; color: #2c3e50; font-size: 13px; margin-bottom: 8px; display: block;">Nom du Patient</label>
+                            <input type="text" name="patient_name" placeholder="Ex: Jean Dupont" style="padding-left: 15px;" required>
+                        </div>
+                        <div class="input-group" style="margin-bottom: 0;">
+                            <label style="font-weight: 700; color: #2c3e50; font-size: 13px; margin-bottom: 8px; display: block;">Âge</label>
+                            <input type="number" name="patient_age" placeholder="Ex: 45" style="padding-left: 15px;" required>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 40px; text-align: center;">
+                        <button type="submit" class="btn-login" style="width: auto; padding: 15px 60px;">
+                            <i class="fas fa-brain"></i> Lancer l'analyse IA
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div style="margin-top: 30px; color: #95a5a6; font-size: 12px; max-width: 600px;">
+                <i class="fas fa-info-circle"></i> Cette analyse est fournie à titre indicatif. 
+                Veuillez consulter un dermatologue certifié pour un diagnostic définitif.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Faza bech t'7el el file input ki t'cliki 3la el box
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const fileNameDisplay = document.getElementById('fileNameDisplay');
+
+        dropZone.onclick = () => fileInput.click();
+
+        function updateFileName() {
+            if (fileInput.files.length > 0) {
+                fileNameDisplay.innerHTML = `<span style="color: #2ecc71"><i class="fas fa-check-circle"></i> Image sélectionnée: ${fileInput.files[0].name}</span>`;
+            }
+        }
+    </script>
+</body>
+</html>
