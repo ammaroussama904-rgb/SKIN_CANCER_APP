@@ -33,6 +33,26 @@ L'objectif est de fournir un outil de dépistage rapide, s'appuyant sur des rés
    ```bash
    git clone [https://github.com/ammaroussama904-rgb/SKIN_CANCER_APP.git](https://github.com/ammaroussama904-rgb/SKIN_CANCER_APP.git)
    <img width="1880" height="888" alt="image" src="https://github.com/user-attachments/assets/9dfeaa8a-cbc0-41d1-9e00-97b66a6aa6d5" />
+   <p align="center">
+  <img src="static/screenshots/dashboard.png" width="600" title="Interface de l'application">
+  ## 📸 Aperçu de l'interface
+
+Voici quelques captures d'écran montrant le fonctionnement de l'application **SkinScan AI**.
+
+### 1. Tableau de Bord Médical (Dashboard)
+Cette vue permet au praticien de visualiser rapidement les statistiques globales des analyses effectuées, notamment le nombre total de cas analysés et la répartition entre cas bénins et malins.
+
+<p align="center">
+  <img src="chemin/vers/image_3.png" width="800" title="Tableau de Bord Medical">
+</p>
+
+### 2. Module d'Analyse par IA
+C'est ici que l'utilisateur peut télécharger l'image de la lésion cutanée, entrer les informations du patient et lancer l'algorithme de détection VGG16.
+
+<p align="center">
+  <img src="chemin/vers/image_4.png" width="800" title="Nouvelle Analyse IA">
+</p>
+</p>
 
    cd SKIN_CANCER_APP
 
