@@ -51,6 +51,8 @@ C'est ici que l'utilisateur peut télécharger l'image de la lésion cutanée, e
 
 <p align="center">
   <img src="chemin/vers/image_4.png" width="800" title="Nouvelle Analyse IA">
+ <img width="1909" height="884" alt="Capture d&#39;écran 2026-04-21 203254" src="https://github.com/user-attachments/assets/7d18d6d4-5d0a-46c0-beb8-f9d625c34489" />
+
 </p>
 </p>
 
