@@ -32,4 +32,7 @@ L'objectif est de fournir un outil de dépistage rapide, s'appuyant sur des rés
 1. **Cloner le dépôt :**
    ```bash
    git clone [https://github.com/ammaroussama904-rgb/SKIN_CANCER_APP.git](https://github.com/ammaroussama904-rgb/SKIN_CANCER_APP.git)
+   <img width="1880" height="888" alt="image" src="https://github.com/user-attachments/assets/9dfeaa8a-cbc0-41d1-9e00-97b66a6aa6d5" />
+
    cd SKIN_CANCER_APP
+
