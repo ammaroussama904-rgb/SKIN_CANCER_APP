@@ -42,9 +42,8 @@ Voici quelques captures d'écran montrant le fonctionnement de l'application **S
 ### 1. Tableau de Bord Médical (Dashboard)
 Cette vue permet au praticien de visualiser rapidement les statistiques globales des analyses effectuées, notamment le nombre total de cas analysés et la répartition entre cas bénins et malins.
 
-<p align="center">
-  <img src="chemin/vers/image_3.png" width="800" title="Tableau de Bord Medical">
-</p>
+<img width="1814" height="807" alt="Capture d&#39;écran 2026-05-06 145125" src="https://github.com/user-attachments/assets/b6def37a-0c9b-40a1-8d18-e40524082497" />
+
 
 ### 2. Module d'Analyse par IA
 C'est ici que l'utilisateur peut télécharger l'image de la lésion cutanée, entrer les informations du patient et lancer l'algorithme de détection VGG16.
